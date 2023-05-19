@@ -1,15 +1,15 @@
 import {
-  Project as ProjectWrapper,
-  ProjectTitle,
-  ProjectStack,
-  ProjectStackTech,
   ProjectLink,
   ProjectLinks,
+  ProjectStack,
+  ProjectStackTech,
+  ProjectTitle,
+  Project as ProjectWrapper,
 } from "./style";
 
-import { Text } from "../../styles/Text";
 import { useEffect, useState } from "react";
 import { FaGithub, FaShare } from "react-icons/fa";
+import { Text } from "../../styles/Text";
 import { userData } from "../../utils/userData";
 
 interface ReposType {
@@ -81,11 +81,7 @@ export const Project = (): JSX.Element => {
                 <FaGithub /> Github Code
               </ProjectLink>
               {repository.homepage && (
-                <ProjectLink
-                  target="_blank"
-                  href={`${repository.homepage}`}
-                  // href={`https://${repository.homepage}`}
-                >
+                <ProjectLink target="_blank" href={`${repository.homepage}`}>
                   <FaShare /> See demo
                 </ProjectLink>
               )}
